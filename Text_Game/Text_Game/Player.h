@@ -53,6 +53,8 @@ public:
 	//This is explained in 'main.cpp'
 	void damagePlayer(int damageAmount)
 	{
+		//This function will deduct the amount passed into it.
+		//Health is assigned to health - damageAmount to assign it to the main health variable.
 		health = health - damageAmount;
 	}
 
