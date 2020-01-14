@@ -72,6 +72,7 @@ public:
 	{
 		if (health <= 0)
 		{
+			std::cout << "You're dead!\n";
 			isDead = true;
 		}
 	}
