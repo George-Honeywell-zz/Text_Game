@@ -53,4 +53,13 @@ public:
 	{
 		health = health - damageAmount;
 	}
+
+	void isDead() 
+	{
+		if (health <= 0) 
+		{
+			cout << "You're dead!" << endl;
+		}
+	}
+
 };

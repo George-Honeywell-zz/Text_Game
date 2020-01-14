@@ -1,7 +1,11 @@
 #include <iostream>
+#include "Player.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    PlayerStats player;
+    cout << player.getHealth() << endl;
 }
 
