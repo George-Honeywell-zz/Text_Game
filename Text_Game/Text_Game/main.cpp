@@ -17,5 +17,26 @@ int main()
         player.checkIsDead();
         Sleep(500);
     }
+
+    while (player.getIsDead() == true) 
+    {
+        cout << "You're dead!\n";
+        cout << "You've been given an extra life. Would you like to use it?\n";
+        cout << "0 = No. 1 = Yes.\n";
+        cin >> player.choice;
+        switch (player.choice) 
+        {
+        case 1:
+            main();
+            break;
+        case 0:
+            cout << "Game Over!\n";
+            break;
+        default:
+            cout << "Invalid Option - Try again!\n";
+            cin >> player.choice;
+            break;
+        }
+    }
 }
 

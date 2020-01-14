@@ -17,7 +17,7 @@ private:
 
 	//PUBLIC means that the variables, functions etc can be called anywhere within the program.
 public:
-
+	int choice;
 	//This is a function that is used to set the players health.
 //As the 'health' variable is private, we need to use public functions to access it within
 //the class, and the public functions to access it else where.
@@ -72,7 +72,7 @@ public:
 	{
 		if (health <= 0)
 		{
-			std::cout << "You're dead!\n";
+			//std::cout << "You're dead!\n";
 			isDead = true;
 		}
 	}
