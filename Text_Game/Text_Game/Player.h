@@ -13,6 +13,7 @@ class PlayerStats {
 	//PRIVATE means that only variables, functions etc can only be called within the class it's in.
 private:
 	int health;
+	bool isDead;
 
 	//PUBLIC means that the variables, functions etc can be called anywhere within the program.
 public:
@@ -44,6 +45,7 @@ public:
 		//If we look at the 'setHealth' function, you can see the function requires one arugment to be passed in.
 		//So, doing 'setHealth(100)' will set the players health to 100. This value can be whatever you like.
 		setHealth(100);
+		//isDead = false;
 	}
 
 	//This is a function that will only take damage away from the player.
@@ -54,12 +56,14 @@ public:
 		health = health - damageAmount;
 	}
 
-	void isDead() 
-	{
-		if (health <= 0) 
-		{
-			cout << "You're dead!" << endl;
-		}
-	}
+	//bool isDead() 
+	//{
+	//	if (health <= 0) 
+	//	{
+	//		cout << "You're dead!" << endl;
+	//	}
+
+	//	return isDead;
+	//}
 
 };
