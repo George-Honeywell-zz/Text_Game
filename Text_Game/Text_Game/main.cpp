@@ -8,13 +8,14 @@ int main()
 {
     PlayerStats player;
 
-    while (player.getHealth() <= 100)
+    while (player.getIsDead() == false)
     {
         cout << "Your current health is: " << player.getHealth() << ".\n";
         cout << "You've been hit! You have taken 5 damage!\n";
-        player.damagePlayer(5);
+        player.damagePlayer(10);
         cout << "Your health is now: " << player.getHealth() << endl << endl;
-        Sleep(1000);
+        player.checkIsDead();
+        Sleep(500);
     }
 }
 

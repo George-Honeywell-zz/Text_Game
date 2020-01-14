@@ -38,6 +38,16 @@ public:
 		return health;
 	}
 
+	void setIsDead(bool x)
+	{
+		isDead = x;
+	}
+
+	bool getIsDead()
+	{
+		return isDead;
+	}
+
 	//This is a 'Constructor'.
 	//A constructor is basically a 'function' that sets all variable initially.
 	PlayerStats()
@@ -45,7 +55,7 @@ public:
 		//If we look at the 'setHealth' function, you can see the function requires one arugment to be passed in.
 		//So, doing 'setHealth(100)' will set the players health to 100. This value can be whatever you like.
 		setHealth(100);
-		//isDead = false;
+		setIsDead(false);
 	}
 
 	//This is a function that will only take damage away from the player.
@@ -58,14 +68,11 @@ public:
 		health = health - damageAmount;
 	}
 
-	//bool isDead() 
-	//{
-	//	if (health <= 0) 
-	//	{
-	//		cout << "You're dead!" << endl;
-	//	}
-
-	//	return isDead;
-	//}
-
+	void checkIsDead()
+	{
+		if (health <= 0)
+		{
+			isDead = true;
+		}
+	}
 };
